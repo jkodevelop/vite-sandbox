@@ -22,3 +22,20 @@ Intall sass
 ```
 npm install -D sass
 ```
+
+## 3. config file
+
+Vite does not need config file to start, default config file is `vite.config.js`
+
+To specify a different file:
+```
+npx vite build --config vite.anotherconfig.js
+```
+
+source: https://vite.dev/config/
+
+
+
+#### source
+
+https://vite.dev/
