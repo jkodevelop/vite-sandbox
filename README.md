@@ -34,6 +34,15 @@ npx vite build --config vite.anotherconfig.js
 
 source: https://vite.dev/config/
 
+## 4. Code splitting
+
+Code splitting in Vite is enabled by default. It will try to split code if it can. Using Dynamic Imports can be used to split the code.
+
+example:
+```
+const math = await import('./math.js');
+```
+
 
 
 #### source
