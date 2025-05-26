@@ -43,6 +43,27 @@ example:
 const math = await import('./math.js');
 ```
 
+## 5. posthtml, templating
+
+One useful plugin for html templating. 
+
+1. install the plugin
+```
+npm i @vituum/vite-plugin-posthtml --save-dev
+```
+
+2. edit the config
+```
+import posthtml from '@vituum/vite-plugin-posthtml'
+...
+plugins: [posthtml()]
+```
+
+3. using this feature
+```
+<include src="src/tpl/tplA.html"></include>
+```
+
 
 
 #### source
