@@ -1,0 +1,23 @@
+{
+  "name": "vite-sandbox",
+  "version": "1.0.0",
+  "description": "vite tester and sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx vite",
+    "build": "npx vite build --emptyOutDir"
+  },
+  "keywords": [
+    "vite",
+    "starter",
+    "sandbox",
+    "tester"
+  ],
+  "author": "jason",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.89.0",
+    "vite": "^6.3.5"
+  }
+}
