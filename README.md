@@ -14,7 +14,7 @@ $ npm create vite@latest <project-folder-name>
 - then follow the prompt and select React and etc...
 ```
 
-*troubleshooting note*: the extra `--` for some reason is needed for windows environment. Else it will get stuck.
+*troubleshooting note*: the extra `--` for some reason is needed for **Windows environment**, else it will get stuck.
 
 *note*
 
