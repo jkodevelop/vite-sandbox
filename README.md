@@ -1,71 +1,51 @@
-# VITE quick guide [2025]
+# React + Vite quick guide [2025]
 
-This project is a quick quide to use Vite for basic configurations that is useful for a project.
+Using Vite documentation, easiest setup with React using Vite is using the `create-vite` option.
 
-## 1. install Vite and usages
+## 1. Create React template with create-vite
 
-Install package.
+1. create the app basic template
 ```
-$ npm install -D vite
-```
+$ npm create vite@latest <project-folder-name> -- --template react
 
-Running Vite
-```
-$ npx vite
-```
+//or
+$ npm create vite@latest <project-folder-name>
 
-## 2. Sass support
-
-Vite just needs to have sass available to automatically support sass
-
-Intall sass
-```
-npm install -D sass
+- then follow the prompt and select React and etc...
 ```
 
-## 3. config file
+*troubleshooting note*: the extra `--` for some reason is needed for windows environment. Else it will get stuck.
 
-Vite does not need config file to start, default config file is `vite.config.js`
+*note*
 
-To specify a different file:
+2. install the packages, go into the project folder
 ```
-npx vite build --config vite.anotherconfig.js
-```
-
-source: https://vite.dev/config/
-
-## 4. Code splitting
-
-Code splitting in Vite is enabled by default. It will try to split code if it can. Using Dynamic Imports can be used to split the code.
-
-example:
-```
-const math = await import('./math.js');
+$ npm install
 ```
 
-## 5. posthtml, templating
-
-One useful plugin for html templating. 
-
-1. install the plugin
+3. Now react x vite is ready out of the box
 ```
-npm i @vituum/vite-plugin-posthtml --save-dev
-```
-
-2. edit the config
-```
-import posthtml from '@vituum/vite-plugin-posthtml'
-...
-plugins: [posthtml()]
-```
-
-3. using this feature
-```
-<include src="src/tpl/tplA.html"></include>
+$ npm run dev
 ```
 
 
+## 2. add Sass support
 
-#### source
+Simply install Sass to support it with vite. Restart and will work right away
+```
+$ npm install sass
+```
 
-https://vite.dev/
+
+## From Vite template
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

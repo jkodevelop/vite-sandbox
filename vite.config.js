@@ -1,11 +1,7 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
 
-import posthtml from '@vituum/vite-plugin-posthtml'
-
+// https://vite.dev/config/
 export default defineConfig({
-  build: {
-    outDir: './dist', // Specify the output directory, /dist is the default vite value
-  },
-  base: './', // or '/', vite default is '/'
-  plugins: [posthtml()],
-});
+  plugins: [react()],
+})
