@@ -64,6 +64,47 @@ plugins: [posthtml()]
 <include src="src/tpl/tplA.html"></include>
 ```
 
+## ADDITIONAL FEATURE: browser-sync
+
+**Browser-sync** allows for project to run on mutiple browser windows and sychronize the user interactions across them. This is optional but useful for testing UI/UX on different type of screen and windows sizes.
+
+Vite has plugin support for browser-sync, it's a proxy to the native vite server
+1. install the plugin
+```
+npm install --save-dev vite-plugin-browser-sync
+```
+
+2. add `vite.onfig.js`
+
+Browser-sync and devServer will both be running
+
+simple setup, this works out of the box
+```
+import VitePluginBrowserSync from 'vite-plugin-browser-sync'
+export default defineConfig({
+  plugins: [VitePluginBrowserSync()]
+});
+```
+
+Some sample options
+```
+plugins: [
+  ...
+  VitePluginBrowserSync({
+  dev: {
+    bs: {
+      ui: {
+        port: 8083,
+      },
+      port: 8080, // Explicitly set the port for BrowserSync
+      notify: false,
+    },
+  },
+})]
+```
+
+source: https://www.npmjs.com/package/vite-plugin-browser-sync
+
 
 
 #### source
